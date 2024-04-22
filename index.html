@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+
+<head> <link rel="stylesheet" href=https://unpkg.com/leaflet@1.9.3/dist/leaflet.css integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="crossorigin=""/> <script src=https://unpkg.com/leaflet@1.9.3/dist/leaflet.js integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+
+</head>
+
+<body>
+
+<div id="map" style="height: 600px"></div>
+
+<script>
+var map = L.map('map').setView([13.7563, 100.5018], 10);
+L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+
+attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+
+}).addTo(map);
+var greenIcon = L.icon({
+
+iconUrl: 'pinn.png',
+
+iconSize: [30, 30], // size of the icon
+
+iconAnchor: [45, 45], // point of the icon which will correspond to marker's location
+
+popupAnchor: [0, -39] // point from which the popup should open relative to the iconAnchor
+
+});
+L.marker([13.75018, 100.49188],{icon:greenIcon}).addTo(map).bindPopup("<b>The Grand Palace</b><br>Pranakorn district, Bangkok<br>")
+L.marker([13.73421, 100.52825],{icon:greenIcon}).addTo(map).bindPopup("<b>Samyan Mitrtown</b><br>Pathum Wan district, Bangkok<br>")
+L.marker([13.7946, 100.3220],{icon:greenIcon}).addTo(map).bindPopup("<b>Mahidol University</b><br>Salaya district, Nakhon Pathom<br>")
+L.marker([13.989, 100.61846],{icon:greenIcon}).addTo(map).bindPopup("<b>Future Park Rangsit</b><br>Thanyaburi district, Pathum thani<br>")
+L.marker([13.9114, 100.6037],{icon:greenIcon}).addTo(map).bindPopup("<b>Don Mueang International Airport</b><br>Don Mueang district, Bangkok<br>")
+L.marker([13.74656, 100.53903],{icon:greenIcon}).addTo(map).bindPopup("<b>Central World</b><br>Pathum Wan district, Bangkok<br>")
+L.marker([13.7681, 100.5203],{icon:greenIcon}).addTo(map).bindPopup("<b>Suan Chitlada</b><br>Dusit district, Bangkok<br>")
+</script>
+
+</body>
+
+</html>
